@@ -22,12 +22,10 @@ function rotateMatrix (arr) {
   let newArr = new Array();
   const fetchElement = new Elements(arr); 
   for (let i = 0; i < arr.length; i++) {
-    //newArr[i] = new Array();
     let row = new Array();
     let y = arr[i];
     for (let x = 0; x < y.length; x++) {
-      //newArr[x][y.length-(i+1)] = y[x];
-      let element = fetchElement.getElement(i, x); //getElement(arr, i, x);
+      let element = fetchElement.getElement(i, x);
       row.unshift(element);
     }
     newArr.unshift(row);
